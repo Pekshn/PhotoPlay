@@ -398,7 +398,6 @@
                                         </state>
                                         <connections>
                                             <action selector="cancelButton:" destination="YWR-jI-5oD" eventType="touchUpInside" id="RHY-YX-9RG"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="pW7-eN-Qz1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwT-U3-Yum">
