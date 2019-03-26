@@ -162,6 +162,22 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
             }
         }
     }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        let alertController = UIAlertController(title: "Delete Text and Picture Fields?", message: nil, preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Delete", style: .default){ (_) in
+            self.image1.image = nil
+            self.image2.image = nil
+            self.image3.image = nil
+            self.txtMessageField.text = nil
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default){ (_) in
+            // Delete Action
+        }
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show_image1segue" {
